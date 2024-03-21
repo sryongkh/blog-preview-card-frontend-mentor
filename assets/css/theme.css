@@ -1,0 +1,112 @@
+:root {
+  --c-black: #111;
+  --c-wh: #fff;
+  --c-yellow: #f4d04e;
+  --c-grey: #7f7f7f;
+}
+*,
+*:before,
+*:after {
+  margin: 0 !important;
+  box-sizing: border-box;
+  font-family: "Figtree";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#main-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--c-yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main-page * {
+  transition: all 0.3s ease;
+}
+#blog-container {
+  width: 26.667vw;
+  padding: 1.5rem;
+  background: var(--c-wh);
+  box-shadow: 1rem 1rem 0 0 var(--c-black);
+  border-radius: 20px;
+  border: 1px solid var(--c-black);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+#blog-container .img-container {
+  aspect-ratio: 42 / 25;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#blog-container .img-container img {
+  width: 100%;
+  height: auto;
+}
+#blog-container .info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#blog-container .info .tag-item {
+  width: fit-content;
+  padding: 4px 12px;
+  background: var(--c-yellow);
+  border-radius: 4px;
+}
+#blog-container .published-date,
+#blog-container .info p {
+  line-height: 150%;
+  text-transform: capitalize;
+  font-size: 0.972vw;
+  font-weight: 600;
+}
+#blog-container .info {
+  font-weight: bold;
+}
+#blog-container .info .title {
+  font-size: 1.667vw;
+  color: var(--c-black);
+}
+#blog-container .info .title:hover {
+  color: var(--c-yellow);
+  cursor: pointer;
+}
+#blog-container .info .description {
+  font-size: 1.111vw;
+  color: var(--c-grey);
+  line-height: 150%;
+  font-weight: 600;
+}
+#blog-container .author {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 12px;
+  text-transform: capitalize;
+}
+#blog-container .author img {
+  max-width: 2rem;
+}
+@media (max-width: 1199px) {
+  #blog-container {
+    min-width: 327px;
+    box-shadow: 0.5rem 0.5rem 0 0 var(--c-black);
+  }
+  #blog-container .info .title {
+    font-size: 20px;
+  }
+  #blog-container .published-date,
+  #blog-container .info p {
+    font-size: 12px;
+  }
+  #blog-container .info .description {
+    font-size: 14px;
+  }
+}
+@media (max-width: 578px) {
+  #blog-container {
+    min-width: 85vw;
+  }
+}
