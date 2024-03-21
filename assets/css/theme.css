@@ -58,11 +58,10 @@ body {
   font-family: "Figtree";
   min-height: 100vh;
   line-height: 1.5;
+  background-color: var(--c-yellow);
 }
 #main-page {
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--c-yellow);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,8 +86,8 @@ body {
   overflow: hidden;
 }
 #blog-container .img-container img {
-  width: 100%;
-  height: auto;
+  max-width: 100%
+  display: block;
 }
 #blog-container .info {
   display: flex;
@@ -105,14 +104,14 @@ body {
 #blog-container .info p {
   line-height: 150%;
   text-transform: capitalize;
-  font-size: 0.972vw;
+  font-size: 0.875rem;
   font-weight: 600;
 }
 #blog-container .info {
   font-weight: bold;
 }
 #blog-container .info .title {
-  font-size: 1.667vw;
+  font-size: 1.5rem;
   color: var(--c-black);
 }
 #blog-container .info .title:hover {
@@ -120,7 +119,7 @@ body {
   cursor: pointer;
 }
 #blog-container .info .description {
-  font-size: 1.111vw;
+  font-size: 1rem;
   color: var(--c-grey);
   line-height: 150%;
   font-weight: 600;
@@ -129,7 +128,7 @@ body {
   display: flex;
   align-items: center;
   font-weight: bold;
-  gap: 12px;
+  gap: 0.75rem;
   text-transform: capitalize;
 }
 #blog-container .author img {
@@ -137,22 +136,17 @@ body {
 }
 @media (max-width: 1199px) {
   #blog-container {
-    min-width: 327px;
+    width: 327px;
     box-shadow: 0.5rem 0.5rem 0 0 var(--c-black);
   }
   #blog-container .info .title {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   #blog-container .published-date,
   #blog-container .info p {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   #blog-container .info .description {
-    font-size: 14px;
-  }
-}
-@media (max-width: 578px) {
-  #blog-container {
-    min-width: 85vw;
+    font-size: 0.875rem;
   }
 }
