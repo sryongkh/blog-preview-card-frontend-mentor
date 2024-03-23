@@ -86,7 +86,7 @@ body {
   overflow: hidden;
 }
 #blog-container .img-container img {
-  max-width: 100%
+  max-width: 100%;
   display: block;
 }
 #blog-container .info {
